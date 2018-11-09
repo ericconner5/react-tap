@@ -2,7 +2,7 @@ import React from 'react';
 import KegList from './KegList';
 import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
-import { NewKeg } from './NewKeg';
+import NewKeg from './NewKeg';
 
 
 function App(){

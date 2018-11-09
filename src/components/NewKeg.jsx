@@ -1,15 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Keg } from './Keg';
+// import PropTypes from 'prop-types';
+// import { Keg } from './Keg';
 
-function NewKeg(props){
-  return (
+function NewKeg(){
+  return(
     <div>
-      <style jsx> {`
-          div {
-            background-color: yellow;
-          }`}</style>
-      <h1>this is the newkeg component</h1>
+      <form>
+        <input
+          type='text'
+          id='names'
+          placeholder='Pair Names'/>
+        <input
+          type='text'
+          id='location'
+          placeholder='Your Location'/>
+        <textarea
+          id='issue'
+          placeholder='Describish That Ish-ish.'/>
+        <button type='submit'>Help!</button>
+      </form>
     </div>
   );
 }
