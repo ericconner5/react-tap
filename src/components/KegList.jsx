@@ -1,7 +1,8 @@
 import React from 'react';
 import Keg from './Keg';
+// import NewKeg from './NewKeg'; maybe not needed
 
-var masterKegList = [
+const masterKegList = [
   {
     brewery: 'Upright',
     brew: 'Bioacoustic Blend',

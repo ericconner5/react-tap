@@ -13,17 +13,17 @@ function Keg(props){
       <hr/>
     </div>
   );
-  }
+}
 
-        Keg.propTypes = {
-          brewery: PropTypes.string.isRequired,
-          brew: PropTypes.string.isRequired,
-          style: PropTypes.string.isRequired,
-          abv: PropTypes.string.isRequired,
-          ibu: PropTypes.string.isRequired,
-          price: PropTypes.string.isRequired,
-          pintCount: PropTypes.string.isRequired,
-          region: PropTypes.string.isRequired
-        };
+Keg.propTypes = {
+  brewery: PropTypes.string.isRequired,
+  brew: PropTypes.string.isRequired,
+  style: PropTypes.string.isRequired,
+  abv: PropTypes.string.isRequired,
+  ibu: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  pintCount: PropTypes.string.isRequired,
+  region: PropTypes.string.isRequired
+};
 
-        export default Keg;
+export default Keg;

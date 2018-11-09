@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Keg from './Keg';
+// import Keg from './Keg';
 
 function EditKeg(props){
   return (

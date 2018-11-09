@@ -30,34 +30,44 @@ module.exports = {
   },
 
   module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          enforce: "pre",
-          loader: "eslint-loader",
-          exclude: /node_modules/,
+    rules: [
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
           options: {
-            emitWarning: true,
-            configFile: "./.eslintrc.json"
-          }
-        },
-        {
-          test: /\.jsx?$/,
-          loader: "babel-loader",
-          exclude: /node_modules/,
-          options: {
-            presets: [
-              ["es2015", {"modules": false}],
-              "react"
-            ],
-            plugins: [
-              "styled-jsx/babel",
-              "react-hot-loader/babel"
-            ]
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
           }
         }
-      ]
-    },
+      },
+      {
+        test: /\.jsx?$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        options: {
+          emitWarning: true,
+          configFile: "./.eslintrc.json"
+        }
+      },
+      {
+        test: /\.jsx?$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          presets: [
+            ["es2015", {"modules": false}],
+            "react"
+          ],
+          plugins: [
+            "styled-jsx/babel",
+            "react-hot-loader/babel"
+          ]
+        }
+      }
+    ]
+  },
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

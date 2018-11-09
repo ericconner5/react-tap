@@ -1,9 +1,10 @@
 import React from 'react';
-import KegList from './KegList';
-import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
+import Header from './Header';
+import KegList from './KegList';
 import NewKeg from './NewKeg';
 import EditKeg from './EditKeg';
+import Body from './Body';
 
 
 function App(){
@@ -15,6 +16,7 @@ function App(){
         <Route path='/newkeg' component={NewKeg} />
         <Route path='/editkeg' component={EditKeg} />
       </Switch>
+      <Body/>
     </div>
   );
 }
