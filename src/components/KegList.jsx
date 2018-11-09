@@ -3,20 +3,35 @@ import Keg from './Keg';
 
 var masterKegList = [
   {
-    names: 'Thato and Haley',
-    location: '3A',
-    issue: 'Firebase won\'t save record. Halp.'
+    brewery: 'Upright',
+    brew: 'Bioacoustic Blend',
+    style: 'Belgian Farmhouse',
+    abv: '7.5%',
+    ibu: '40',
+    price: '$9',
+    pintCount: '64',
+    region: 'Portland, OR'
   },
   {
-    names: 'Sleater and Kinney',
-    location: '4B',
-    issue: 'Fox image not displaying on page, can only see duck?'
+    brewery: 'Lompoc',
+    brew: 'Old Tavern Rat',
+    style: 'Barleywine',
+    abv: '9.7%',
+    ibu: 'NA',
+    price: '$7',
+    pintCount: '128',
+    region: 'Portland, OR'
   },
   {
-    names: 'Imani & Jacob',
-    location: '9F',
-    issue: 'Donkey picture not displaying on hover in Zoology app. :('
-  }
+    brewery: 'Fantom',
+    brew: 'Hiver',
+    style: 'Belgian Saison',
+    abv: '8%',
+    ibu: 'NA',
+    price: '$13',
+    pintCount: '32',
+    region: 'Soy-Erezee, Belgium'
+  },
 ];
 
 function KegList(){
@@ -24,9 +39,14 @@ function KegList(){
     <div>
       <hr/>
       {masterKegList.map((keg, index) =>
-        <Keg names={keg.names}
-          location={keg.location}
-          issue={keg.issue}
+        <Keg brewery={keg.brewery}
+          brew={keg.brew}
+          style={keg.style}
+          abv={keg.abv}
+          ibu={keg.ibu}
+          price={keg.price}
+          pintCount={keg.pintCount}
+          region={keg.region}
           key={index}/>
       )}
     </div>

@@ -12,6 +12,10 @@ function NewKeg(){
           placeholder='Brewery Name'/>
         <input
           type='text'
+          id='brew'
+          placeholder='Brew'/>
+        <input
+          type='text'
           id='newStyle'
           placeholder='Beer style'/>
         <input
