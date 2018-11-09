@@ -1,12 +1,18 @@
 import React from 'react';
-import TicketList from './TicketList';
+import KegList from './KegList';
 import Header from './Header';
+import { Switch, Route } from 'react-router-dom';
+import { NewKeg } from './NewKeg';
+
 
 function App(){
   return (
     <div>
       <Header/>
-      <TicketList/>
+      <Switch>
+        <Route exact path='/' component={KegList} />
+        <Route path='/newkeg' component={NewKeg} />
+      </Switch>
     </div>
   );
 }

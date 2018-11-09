@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Header(props){
+function SellPint(props){
   return (
     <div>
       <style jsx> {`
           div {
             background-color: yellow;
           }`}</style>
-      <h1>Shady's Kegs</h1>
+      <h1>the sellpint component</h1>
     </div>
   );
 }
 
-export default Header;
+export default SellPint;

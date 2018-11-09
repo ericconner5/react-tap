@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Keg } from './Keg';
 
-function Header(props){
+function NewKeg(props){
   return (
     <div>
       <style jsx> {`
           div {
             background-color: yellow;
           }`}</style>
-      <h1>Shady's Kegs</h1>
+      <h1>this is the newkeg component</h1>
     </div>
   );
 }
 
-export default Header;
+export default NewKeg;

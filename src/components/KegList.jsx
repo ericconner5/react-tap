@@ -1,7 +1,7 @@
 import React from 'react';
-import Ticket from './Ticket';
+import Keg from './Keg';
 
-var masterTicketList = [
+var masterKegList = [
   {
     names: 'Thato and Haley',
     location: '3A',
@@ -19,18 +19,18 @@ var masterTicketList = [
   }
 ];
 
-function TicketList(){
+function KegList(){
   return (
     <div>
       <hr/>
-      {masterTicketList.map((ticket, index) =>
-        <Ticket names={ticket.names}
-          location={ticket.location}
-          issue={ticket.issue}
+      {masterKegList.map((keg, index) =>
+        <Keg names={keg.names}
+          location={keg.location}
+          issue={keg.issue}
           key={index}/>
       )}
     </div>
   );
 }
 
-export default TicketList;
+export default KegList;
