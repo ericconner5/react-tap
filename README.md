@@ -15,7 +15,7 @@ So far React has been more intuitive than Angular. I'm not wasting much time nav
 
 ## App Route Structure
 
-![alt text](src/assets/images/app-route-tree.jpg "App Route")
+![alt text](./src/assets/images/app-route-tree.jpg "App Route")
 
 ## Setup on OS X
 
