@@ -1,6 +1,6 @@
 # Shady's Kegs - A Pub's Keg Database
 
-This project was made with React
+This project was made with React.
 
 ## Created by Eric Conner
 
