@@ -7,7 +7,10 @@ function Header(props){
     <div>
       <style jsx> {`
           div {
-            background-color: yellow;
+            margin: 0;
+            padding: 1rem;
+            min-height: 17vh;
+            background: linear-gradient(#e3dcc0, #d2be96, #ab9c73);
           }`}</style>
       <h1>Shady's Kegs</h1>
       <Link to="/">Shady's Home</Link> |

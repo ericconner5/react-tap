@@ -8,8 +8,16 @@ import Body from './Body';
 
 
 function App(){
+  const appStyles = {
+    background: 'linear-gradient(#c1d2d6, #aebbc7, #6a7d8e)',
+    height: '100%',
+    margin: "none",
+    fontFamily: 'Tahoma',
+    color: '#493829',
+
+  };
   return (
-    <div>
+    <div style={appStyles}>
       <Header/>
       <Switch>
         <Route exact path='/' component={KegList} />

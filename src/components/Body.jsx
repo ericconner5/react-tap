@@ -4,14 +4,21 @@ import kegWalkIn from '../assets/images/keg-walk-in.jpg';
 
 function Body(props){
   return (
-    <style jsx> {`
-        img {
-          max-width: 25%;
-        }`}</style>
-        <div>
-          <img src={kegWalkIn}/>
-        </div>
-      );
-    }
+    <div>
+      <style jsx> {`
+        #kegImage {
+          max-width: 50%;
+        }
 
-    export default Body;
+
+
+        `}
+      </style>
+      <div>
+        <img src={kegWalkIn} id='kegImage'/>
+      </div>
+    </div>
+  );
+}
+
+export default Body;

@@ -38,7 +38,6 @@ const masterKegList = [
 function KegList(){
   return (
     <div>
-      <hr/>
       {masterKegList.map((keg, index) =>
         <Keg brewery={keg.brewery}
           brew={keg.brew}
