@@ -11,7 +11,7 @@ function App(){
   const appStyles = {
     background: 'linear-gradient(#c1d2d6, #aebbc7, #6a7d8e)',
     height: '100%',
-    margin: "none",
+    margin: 'none',
     fontFamily: 'Tahoma',
     color: '#493829',
 
