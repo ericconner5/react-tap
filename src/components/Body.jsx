@@ -6,11 +6,20 @@ function Body(props){
   return (
     <div>
       <style jsx> {`
-        #kegImage {
-          max-width: 50%;
+        // #kegImage {
+        //   max-width: 50%;
+        // }
+
+        body {
+          background-image: url('../assets/images/keg-walk-in.jpg');
+          background-repeat: no-repeat;
+          background-position: center;
+          max-width: 100px;
+          background-size: inherit;
+          max-width: 100%;
+
+
         }
-
-
 
         `}
       </style>

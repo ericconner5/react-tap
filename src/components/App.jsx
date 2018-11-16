@@ -5,6 +5,7 @@ import KegList from './KegList';
 import NewKeg from './NewKeg';
 import EditKeg from './EditKeg';
 import Body from './Body';
+import Error404 from './Error404';
 
 
 function App(){
@@ -23,6 +24,7 @@ function App(){
         <Route exact path='/' component={KegList} />
         <Route path='/newkeg' component={NewKeg} />
         <Route path='/editkeg' component={EditKeg} />
+        <Route component={Error404} />
       </Switch>
       <Body/>
     </div>
