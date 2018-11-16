@@ -66,7 +66,7 @@ function NewKeg(props){
   );
 }
 
-NewKeg.proptypes = {
+NewKeg.propTypes = {
   onNewKegCreation: PropTypes.func
 };
 

@@ -20,4 +20,8 @@ function Header(props){
   );
 }
 
+Header.propTypes = {
+  header: PropTypes.object
+};
+
 export default Header;

@@ -57,7 +57,7 @@ function KegList(props){
 KegList.propTypes = {
   kegList: PropTypes.object,
   currentRouterPath: PropTypes.string,
-  masterKegList: Proptypes.array
+  masterKegList: PropTypes.array
 };
 
 export default KegList;
