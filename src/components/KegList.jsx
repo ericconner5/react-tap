@@ -39,7 +39,7 @@ import PropTypes from 'prop-types';
 function KegList(props){
   return (
     <div>
-      {props.masterKegList.map((keg, index) =>
+      {props.kegList.map((keg, index) => {
         <Keg brewery={keg.brewery}
           brew={keg.brew}
           style={keg.style}
@@ -49,7 +49,7 @@ function KegList(props){
           pintCount={keg.pintCount}
           region={keg.region}
           key={index}/>
-      )}
+      })}
     </div>
   );
 }

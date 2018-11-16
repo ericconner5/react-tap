@@ -1,8 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import KegList from './KegList';
-import NewKeg from './NewKeg';
+import NewKeg from './NewKeg'; /*should go in keglist?*/
 import EditKeg from './EditKeg';
 import Error404 from './Error404';
 import kegWalkIn from '../assets/images/keg-walk-in.jpg';
@@ -19,26 +20,33 @@ class App extends React.Component {
   }
 
   handleAddingNewKegToList(newKeg) {
-    let newMasterKegList = this.state.masterKegList.slice();
+    const newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
   }
 
   render() {
-    const appStyles = {
-      // background: 'linear-gradient(#c1d2d6, #aebbc7, #6a7d8e)',
-      height: '100%',
-      margin: 'none',
-      fontFamily: 'Tahoma',
-      color: '#493829',
-      backgroundImage: `url(${kegWalkIn})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundColor: 'rgba(211, 211, 211, 0.8)',
-    };
+
+    //   // background: 'linear-gradient(#c1d2d6, #aebbc7, #6a7d8e)',
+
     return (
-      <div style={appStyles}>
+      <div className='app-container'>
+        <style jsx global>{`
+            html {
+              background-image: url(${kegWalkIn});
+              margin: none;
+              font-family: Tahoma;
+              color: #463829;
+              height: 100%;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              background-color: rgba(211, 211, 211, 0.8);
+
+            }
+
+
+                  `}</style>
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />

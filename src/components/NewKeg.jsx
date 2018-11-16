@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 // import Keg from './Keg'; appears to be unneccessary
 
 function NewKeg(props){
-  let _brewery = null;
-  let _brew = null;
-  let _style = null;
-  let _abv = null;
-  let _ibu = null;
-  let _price = null;
-  let _pintCount = null;
-  let _region = null;
+  // let _brewery = null;
+  // let _brew = null;
+  // let _style = null;
+  // let _abv = null;
+  // let _ibu = null;
+  // let _price = null;
+  // let _pintCount = null;
+  // let _region = null;
 
   function handleAddingNewKegToList(event) {
     event.preventDefault();
@@ -41,19 +41,19 @@ function NewKeg(props){
           id='style'
           placeholder='Beer style'/>
         <input
-          type='text'
+          type='number'
           id='abv'
           placeholder='ABV %'/>
         <input
-          type='text'
+          type='number'
           id='ibu'
           placeholder='IBU'/>
         <input
-          type='text'
+          type='number'
           id='price'
           placeholder='Price'/>
         <input
-          type='text'
+          type='number'
           id='pintCount'
           placeholder='Pint Count'/>
         <input
