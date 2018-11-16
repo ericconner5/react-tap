@@ -2,13 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import Keg from './Keg'; appears to be unneccessary
 
-function NewKeg(){
+function NewKeg(props){
+  let _brewery = null;
+  let _brew = null;
+  let _style = null;
+  let _abv = null;
+  let _ibu = null;
+  let _price = null;
+  let _pintCount = null;
+  let _region = null;
+
+  function handleAddingNewKegToList(event) {
+    event.preventDefault();
+    props.onNewKegCreation({brewery: _brewery.value, brew: _brew.value, style: _style.value, abv: _abv.value, ibu: _ibu.value, price: _price.value, pintCount: _pintCount.value, region: _region.value});
+    _brewery.value = '';
+    _brew.value = '';
+    _style.value = '';
+    _abv.value = '';
+    _ibu.value = '';
+    _price.value = '';
+    _pintCount.value = '';
+    _region.value = '';
+  }
+
   return(
     <div>
-      <form>
+      <form onSubmit={handleAddingNewKegToList}>
         <input
           type='text'
-          id='newBrewery'
+          id='brewery'
           placeholder='Brewery Name'/>
         <input
           type='text'
@@ -16,32 +38,36 @@ function NewKeg(){
           placeholder='Brew'/>
         <input
           type='text'
-          id='newStyle'
+          id='style'
           placeholder='Beer style'/>
         <input
           type='text'
-          id='newAbv'
+          id='abv'
           placeholder='ABV %'/>
         <input
           type='text'
-          id='newIbu'
+          id='ibu'
           placeholder='IBU'/>
         <input
           type='text'
-          id='newPrice'
+          id='price'
           placeholder='Price'/>
         <input
           type='text'
-          id='newPintCount'
+          id='pintCount'
           placeholder='Pint Count'/>
         <input
           type='text'
-          id='newRegion'
+          id='region'
           placeholder='Region'/>
         <button type='submit'>Add New Keg</button>
       </form>
     </div>
   );
 }
+
+NewKeg.proptypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 export default NewKeg;

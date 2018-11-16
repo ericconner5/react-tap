@@ -10,6 +10,7 @@ function Keg(props){
     border: '1px solid lightgrey',
     padding: '1rem',
     justifyContent: 'center',
+    backgroundColor: 'rgba(211, 211, 211, 0.5)',
 
   };
   return (
