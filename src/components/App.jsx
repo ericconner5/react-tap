@@ -26,7 +26,6 @@ class App extends React.Component {
   }
 
   render() {
-
     //   // background: 'linear-gradient(#c1d2d6, #aebbc7, #6a7d8e)',
 
     return (

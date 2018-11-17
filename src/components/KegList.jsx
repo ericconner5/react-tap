@@ -37,9 +37,11 @@ import PropTypes from 'prop-types';
 // ];
 
 function KegList(props){
+  console.log(props.ticketList);
   return (
     <div>
-      {props.kegList.map((keg, index) => {
+      {props.kegList.map((keg) => {
+        // let keg = props.kegList[index];
         <Keg brewery={keg.brewery}
           brew={keg.brew}
           style={keg.style}
@@ -48,7 +50,7 @@ function KegList(props){
           price={keg.price}
           pintCount={keg.pintCount}
           region={keg.region}
-          key={index}/>
+          key={keg.id}/>;
       })}
     </div>
   );
