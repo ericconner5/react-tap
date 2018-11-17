@@ -2,7 +2,7 @@ import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
 // import NewKeg from './NewKeg'; maybe not needed
-
+// 
 // const masterKegList = [
 //   {
 //     brewery: 'Upright',
@@ -41,7 +41,6 @@ function KegList(props){
   return (
     <div>
       {props.kegList.map((keg) => {
-        // let keg = props.kegList[index];
         <Keg brewery={keg.brewery}
           brew={keg.brew}
           style={keg.style}

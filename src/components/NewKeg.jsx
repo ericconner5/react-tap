@@ -69,6 +69,7 @@ function NewKeg(props){
 }
 
 NewKeg.propTypes = {
+  kegList: PropTypes.array,
   onNewKegCreation: PropTypes.func
 };
 

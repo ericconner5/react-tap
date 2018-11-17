@@ -7,10 +7,18 @@ function Header(props){
     <div>
       <style jsx> {`
           div {
-            margin: 0;
             padding: 1rem;
             min-height: 17vh;
-            background: linear-gradient(#e3dcc0, #d2be96, #ab9c73);
+            /* background: linear-gradient(#e3dcc0, #d2be96, #ab9c73);*/
+            background-color: rgba(111, 111, 111, 0.6);
+            border-radius: 7%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            text-shadow: 0px 0px 4px white;
+            color: #6a7d8e;
+            font-size: 150%;
           }`}</style>
       <h1>Shady's Kegs</h1>
       <Link to="/">Shady's Home</Link> |
