@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import KegList from './KegList';
 import NewKeg from './NewKeg'; /*should go in keglist?*/
+// import NewKegControl from './NewKegControl';
 import EditKeg from './EditKeg';
 import Error404 from './Error404';
 import kegWalkIn from '../assets/images/keg-walk-in.jpg';
@@ -20,6 +21,7 @@ class App extends React.Component {
   }
 
   handleAddingNewKegToList(newKeg) {
+    console.log(newKeg);
     const newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg);
     this.setState({masterKegList: newMasterKegList});
@@ -49,6 +51,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
+
           <Route path='/newkeg' render={()=><NewKeg onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route path='/editkeg' component={EditKeg} />
           <Route component={Error404} />

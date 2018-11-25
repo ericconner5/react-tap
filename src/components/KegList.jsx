@@ -1,8 +1,8 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
-// import NewKeg from './NewKeg'; maybe not needed
-// 
+import NewKeg from './NewKeg';
+//
 // const masterKegList = [
 //   {
 //     brewery: 'Upright',
@@ -37,7 +37,6 @@ import PropTypes from 'prop-types';
 // ];
 
 function KegList(props){
-  console.log(props.ticketList);
   return (
     <div>
       {props.kegList.map((keg) => {
@@ -48,17 +47,16 @@ function KegList(props){
           ibu={keg.ibu}
           price={keg.price}
           pintCount={keg.pintCount}
-          region={keg.region}
-          key={keg.id}/>;
+          region={keg.region}/>;
       })}
     </div>
   );
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.object,
+  kegList: PropTypes.array,
   currentRouterPath: PropTypes.string,
-  masterKegList: PropTypes.array
+
 };
 
 export default KegList;

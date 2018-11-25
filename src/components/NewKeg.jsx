@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
+// import { v4 } from 'uuid';
 // import Keg from './Keg'; appears to be unneccessary
 
 function NewKeg(props){
@@ -15,8 +15,7 @@ function NewKeg(props){
 
   function handleAddingNewKegToList(event) {
     event.preventDefault();
-    console.log(_brewery.value);
-    props.onNewKegCreation({brewery: _brewery.value, brew: _brew.value, style: _style.value, abv: _abv.value, ibu: _ibu.value, price: _price.value, pintCount: _pintCount.value, region: _region.value, id:v4()});
+    props.onNewKegCreation({brewery: _brewery.value, brew: _brew.value, style: _style.value, abv: _abv.value, ibu: _ibu.value, price: _price.value, pintCount: _pintCount.value, region: _region.value});
     _brewery.value = '';
     _brew.value = '';
     _style.value = '';
@@ -33,35 +32,43 @@ function NewKeg(props){
         <input
           type='text'
           id='brewery'
-          placeholder='Brewery Name'/>
+          placeholder='Brewery Name'
+          ref={(input) => {_brewery = input;}}/>
         <input
           type='text'
           id='brew'
-          placeholder='Brew'/>
+          placeholder='Brew'
+          ref={(input) => {_brew = input;}}/>
         <input
           type='text'
           id='style'
-          placeholder='Beer style'/>
+          placeholder='Beer style'
+          ref={(input) => {_style = input;}}/>
         <input
           type='number'
           id='abv'
-          placeholder='ABV %'/>
+          placeholder='ABV %'
+          ref={(input) => {_abv = input;}}/>
         <input
           type='number'
           id='ibu'
-          placeholder='IBU'/>
+          placeholder='IBU'
+          ref={(input) => {_ibu = input;}}/>
         <input
           type='number'
           id='price'
-          placeholder='Price'/>
+          placeholder='Price'
+          ref={(input) => {_price = input;}}/>
         <input
           type='number'
           id='pintCount'
-          placeholder='Pint Count'/>
+          placeholder='Pint Count'
+          ref={(input) => {_pintCount = input;}}/>
         <input
           type='text'
           id='region'
-          placeholder='Region'/>
+          placeholder='Region'
+          ref={(input) => {_region = input;}}/>
         <button type='submit'>Add New Keg</button>
       </form>
     </div>
