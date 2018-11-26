@@ -19,8 +19,9 @@ function Keg(props){
     <div style={kegStyles}>
       <h2>{props.brewery} - {props.brew}</h2>
       <h4>Style: {props.style}</h4>
-      <h4>ABV: {props.abv} IBU: {props.ibu}</h4>
-      <h4>{props.price}</h4>
+      <h4>ABV: {props.abv}</h4> 
+      <h4>IBU: {props.ibu}</h4>
+      <h4>${props.price}</h4>
       <h4>Pints Remaining: {props.pintCount}</h4>
       <h4>From: {props.region}</h4>
     </div>

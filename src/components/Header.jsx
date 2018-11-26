@@ -20,13 +20,12 @@ function Header(props){
             font-size: 150%;
             font-family: Tahoma;
             color: #463829;
-            text-decoration: none;
             justify-content: space-between;
           }`}</style>
       <h1>Shady's Kegs</h1>
-      <Link to="/" style={{ textDecoration: 'none', padding: '4vw' }}>Shady's Home</Link>
-      <Link to="/newkeg" style={{ textDecoration: 'none', padding: '4vw' }}>Add Keg</Link>
-      <Link to="/editkeg" style={{ textDecoration: 'none', padding: '4vw' }}>Edit Keg</Link>
+      <Link to="/" style={{ textDecoration: 'none', padding: '4vw', color: '#463829' }}>Shady's Home</Link>
+      <Link to="/newkeg" style={{ textDecoration: 'none', padding: '4vw', color: '#463829' }}>Add Keg</Link>
+      <Link to="/editkeg" style={{ textDecoration: 'none', padding: '4vw', color: '#463829' }}>Edit Keg</Link>
     </div>
   );
 }
