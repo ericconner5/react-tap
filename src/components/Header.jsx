@@ -13,6 +13,7 @@ function Header(props){
             background-color: rgba(211, 211, 211, 0.6);
             border-radius: 1%;
             text-align: center;
+            margin-top: 2%;
             margin-left: auto;
             margin-right: auto;
             width: 70%;
