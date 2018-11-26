@@ -7,23 +7,26 @@ function Header(props){
     <div>
       <style jsx> {`
           div {
-            padding: 1rem;
+
+            padding: .2rem;
             min-height: 17vh;
-            /* background: linear-gradient(#e3dcc0, #d2be96, #ab9c73);*/
-            background-color: rgba(111, 111, 111, 0.6);
-            border-radius: 7%;
+            background-color: rgba(211, 211, 211, 0.6);
+            border-radius: 1%;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
-            text-shadow: 0px 0px 4px white;
-            color: #6a7d8e;
+            width: 70%;
+            text-shadow: 0px 0px 4px grey;
             font-size: 150%;
+            font-family: Tahoma;
+            color: #463829;
+            text-decoration: none;
+            justify-content: space-between;
           }`}</style>
       <h1>Shady's Kegs</h1>
-      <Link to="/">Shady's Home</Link> |
-      <Link to="/newkeg">Shady's Add Keg</Link> |
-      <Link to="/editkeg">Shady's Edit Keg</Link>
+      <Link to="/" style={{ textDecoration: 'none', padding: '4vw' }}>Shady's Home</Link>
+      <Link to="/newkeg" style={{ textDecoration: 'none', padding: '4vw' }}>Add Keg</Link>
+      <Link to="/editkeg" style={{ textDecoration: 'none', padding: '4vw' }}>Edit Keg</Link>
     </div>
   );
 }

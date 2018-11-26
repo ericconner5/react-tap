@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import KegList from './KegList';
 import NewKeg from './NewKeg'; /*should go in keglist?*/
-// import NewKegControl from './NewKegControl';
 import EditKeg from './EditKeg';
 import Error404 from './Error404';
 import kegWalkIn from '../assets/images/keg-walk-in.jpg';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { v4 } from 'uuid';
+import { v4 } from 'uuid';
 // import Keg from './Keg'; appears to be unneccessary
 
 function NewKeg(props){
@@ -15,7 +15,7 @@ function NewKeg(props){
 
   function handleAddingNewKegToList(event) {
     event.preventDefault();
-    props.onNewKegCreation({brewery: _brewery.value, brew: _brew.value, style: _style.value, abv: _abv.value, ibu: _ibu.value, price: _price.value, pintCount: _pintCount.value, region: _region.value});
+    props.onNewKegCreation({brewery: _brewery.value, brew: _brew.value, style: _style.value, abv: _abv.value, ibu: _ibu.value, price: _price.value, pintCount: _pintCount.value, region: _region.value, id: v4()});
     _brewery.value = '';
     _brew.value = '';
     _style.value = '';
